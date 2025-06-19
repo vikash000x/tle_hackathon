@@ -128,9 +128,19 @@ tle_hackathon/
 
 - **Theme:** Uses Context API for persistent dark/light mode.
 - **Analytics:** Analytics logic is in `backend/utils/analytics.js` and can be extended.
-- **Reminders:** Email reminder logic can be customized in the backend.
+- **Reminders:** Email reminder logic can be turned of/on using button.
+- **Codeforces Data Syn:**  whenever student is added cf data will be fetched of that particular student to mongodb with an api of cf and every day at 2:00 AM will be cf syncing function executed to update that cf data using CRON job.
+- 
 
 ---
+
+.env file 
+
+PORT=5000
+MONGO_URI=
+MAIL_USER=
+MAIL_PASS=
+CRON_TIME=0 2 * * *
 
 ## Contributing
 
@@ -142,9 +152,7 @@ tle_hackathon/
 
 ---
 
-## License
 
-MIT License
 
 ---
 
