@@ -12,12 +12,12 @@ scheduleSync(process.env.CRON_TIME); // reads from .env or defaults to 2AM
 
 const app = express();
 const corsOptions = {
-    origin:'https://stalthai-thon.onrender.com/',
+    origin:'https://tle-hackathon.onrender.com/',
     credentials:true
 }
 
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const _dirname = path.resolve();
