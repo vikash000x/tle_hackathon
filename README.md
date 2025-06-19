@@ -132,8 +132,10 @@ tle_hackathon/
 - **Codeforces Data Syn:**  whenever student is added cf data will be fetched of that particular student to mongodb with an api of cf and every day at 2:00 AM will be cf syncing function executed to update that cf data using CRON job.
 - **Responsiveness:** our web application is responsive for tablet view (768 x 1024) and more
 - **Graph:** added different types of graph for better view such as barchart, heatmap, rating chart
+<img width="960" alt="ss_of_excel" src="https://github.com/user-attachments/assets/ea0b00c8-a3a5-4a77-8886-512cfa88ba01" />
 
----
+![WhatsApp Image 2025-06-19 at 13 33 13_68e05e22](https://github.com/user-attachments/assets/4932cb0d-6e9d-4ac9-a6f1-6a38f740974f)
+
 
 .env file 
 
