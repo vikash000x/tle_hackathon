@@ -40,11 +40,11 @@ const StudentForm = ({ onSuccess, editingStudent = null, onCancel }) => {
     try {
       if (editingStudent) {
         await axios.put(
-          `http://localhost:5000/api/students/${editingStudent._id}`,
+          `https://tle-hackathon.onrender.com/api/students/${editingStudent._id}`,
           formData
         );
       } else {
-        await axios.post("http://localhost:5000/api/students", formData);
+        await axios.post("https://tle-hackathon.onrender.com/api/students", formData);
       }
 
       onSuccess();

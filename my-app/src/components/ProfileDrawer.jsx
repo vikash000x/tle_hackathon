@@ -20,9 +20,9 @@ const ProfileDrawer = ({ studentId, isOpen, onClose }) => {
 
     const fetchData = async () => {
       const [contestRes, problemRes, studentRes] = await Promise.all([
-        axios.get(`http://localhost:5000/api/students/${studentId}/contest-data?range=${contestRange}`),
-        axios.get(`http://localhost:5000/api/students/${studentId}/problem-stats?range=${problemRange}`),
-        axios.get(`http://localhost:5000/api/students/${studentId}`)
+        axios.get(`https://tle-hackathon.onrender.com/api/students/${studentId}/contest-data?range=${contestRange}`),
+        axios.get(`https://tle-hackathon.onrender.com/api/students/${studentId}/problem-stats?range=${problemRange}`),
+        axios.get(`https://tle-hackathon.onrender.com/api/students/${studentId}`)
       ]);
 
       setContestData(contestRes.data.contests || []);
@@ -43,7 +43,7 @@ const ProfileDrawer = ({ studentId, isOpen, onClose }) => {
         ...students,
         emailOptOut: !students.emailOptOut,
         };
-        await axios.put(`http://localhost:5000/api/students/${students._id}`, updatedStudent);
+        await axios.put(`https://tle-hackathon.onrender.com/api/students/${students._id}`, updatedStudent);
         setStudents(updatedStudent);
     } catch (error) {
         console.error("Failed to update reminder setting:", error);
